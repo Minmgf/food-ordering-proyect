@@ -22,7 +22,7 @@ export default function ProfilePage(){
 
     useEffect( () => {
         if(status === 'authenticated'){
-            // setUserName(session.data.user.name);
+            setUserName(session.data.user.name);
             // setImage(session.data.user.image);
             fetch('/api/profile').then(response => {
                 response.json().then( data => {
@@ -41,12 +41,13 @@ export default function ProfilePage(){
 
     async function handleProfileInfoUpdate(ev){
         ev.preventDefault();
+
         const savingPromise = new Promise ( async (resolve, reject) => {
             const response = await fetch('/api/profile', {
                 method: 'PUT',
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify({
-                    userName,
+                    name: userName,
                     image,
                     streetAddress,
                     zipCode,
