@@ -18,7 +18,7 @@ export default function Header(){
                     ST PIZZA
                 </Link>
                 <Link href={'/'}>Home</Link>
-                <Link href={'/Menu'}>Menu</Link>
+                <Link href={'/menu'}>Menu</Link>
                 <Link href={'/About'}>About</Link>
                 <Link href={'/Contact'}>Contact</Link>
             </nav>

@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import MenuItem from './menu/MenuItem';
+import MenuItem from './MenuItem';
 import SectionHeaders from './SectionHeaders';
 
 export default function HomeMenu(){
