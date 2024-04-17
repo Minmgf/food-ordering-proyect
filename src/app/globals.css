@@ -15,6 +15,7 @@ label + input{
     margin-top: -2px;
 }
 
+select,
 input[type="email"],
 input[type="password"],
 input[type="tel"],
@@ -34,7 +35,7 @@ button, .button{
     @apply flex justify-center w-full gap-2 font-semibold text-gray-700;
     @apply px-6 py-2 border border-gray-300 rounded-xl;
 }
-button[type='submit'], .submit{
+button[type='submit'], .submit, button.primary{
     @apply text-white border-primary bg-primary;
 }
 button[type='submit']:disabled, .submit:disabled{

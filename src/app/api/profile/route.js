@@ -25,5 +25,4 @@ export async function GET(req){
     return Response.json(
         await User.findOne({email})
     )
-
 }

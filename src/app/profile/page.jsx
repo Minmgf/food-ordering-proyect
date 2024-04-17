@@ -91,7 +91,7 @@ export default function ProfilePage(){
     return(
         <section className="my-8">
             <UserTabs isAdmin={isAdmin}/>
-            <div className="max-w-md mx-auto ">
+            <div className="max-w-2xl mx-auto ">
                 <div className="flex gap-4">
                     <div>
                         <div className="p-2 rounded-lg relative max-w-[180px]">

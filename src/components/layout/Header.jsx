@@ -1,5 +1,6 @@
 'use client';
 import { signOut, useSession } from 'next-auth/react';
+import { redirect } from 'next/dist/server/api-utils';
 import Link from 'next/link';
 
 export default function Header(){
@@ -27,7 +28,7 @@ export default function Header(){
                     <>
                     <Link href={'/profile'} className='whitespace-nowrap'> Hello, {userName}</Link>
                     <button
-                    onClick={() => signOut()}
+                    onClick={() => signOut( {callbackUrl: '/'})}
                     className='px-4 py-2 text-white rounded-full bg-primary'>
                         Logout
                     </button>
