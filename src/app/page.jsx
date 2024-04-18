@@ -8,8 +8,8 @@ export default function Home(){
     <>
         <Hero/>
         <HomeMenu/>
-        <section className='my-16 text-center'>
-            <SectionHeaders subHeader="Our story" mainHeader="About us" />
+        <section className='my-16 text-center' id='about'>
+            <SectionHeaders subHeader="Our story" mainHeader="About us" id='about' />
             <div className="flex flex-col max-w-2xl gap-4 mx-auto mt-8 text-gray-500">
             <p className=''>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, temporibus porro nam eveniet doloremque consectetur! Sint magni dignissimos consequatur sapiente unde ipsam consectetur ab provident, error, mollitia aspernatur accusantium omnis?
@@ -22,7 +22,7 @@ export default function Home(){
             </p>
             </div>
         </section>
-        <section className='max-w-2xl mx-auto my-8 text-center '>
+        <section className='max-w-2xl mx-auto my-8 text-center ' id='contact'>
             <SectionHeaders subHeader="Don\'t hesitate" mainHeader="Contact us" />
             <div className="mt-8">
                 <a href="tel:+573157541225" className='text-4xl text-gray-500 underline '>

@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
 .hero{
     @apply grid;
     grid-template-columns: .4fr .6fr;

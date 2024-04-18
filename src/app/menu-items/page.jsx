@@ -29,7 +29,7 @@ export default function MenuItesmsPage(){
 
 
     return (
-        <section className="max-w-2xl mx-auto mt-8">
+        <section className="max-w-2xl mx-auto my-8">
             <UserTabs isAdmin={true}/>
             <div className="mt-8">
                 <Link
@@ -44,7 +44,7 @@ export default function MenuItesmsPage(){
                 <div className="grid content-center grid-cols-3 gap-2">
                     {menuItems?.length > 0 && menuItems.map( item => (
                         <Link href={'/menu-items/edit/'+item._id}
-                                className="flex-col p-4 bg-gray-200 rounded-lg justify-self-center">
+                                className="flex-col p-4 bg-gray-100 rounded-lg justify-self-center">
                             <div className="relative w-44 h-4w-44">
                                 <Image
                                 className="rounded-md "

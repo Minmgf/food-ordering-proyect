@@ -2,6 +2,9 @@
 import { signOut, useSession } from 'next-auth/react';
 import { redirect } from 'next/dist/server/api-utils';
 import Link from 'next/link';
+import { useContext } from 'react';
+import { CartContext } from '../AppContext';
+import ShoppingCart from '../icons/ShoppingCart';
 
 export default function Header(){
     const session = useSession();
@@ -9,6 +12,9 @@ export default function Header(){
     const status = session.status;
     const userData = session?.data?.user ;
     let userName = userData?.name || userData?.email;
+    const {cartProducts} = useContext(CartContext)
+
+
     if(userName && userName.includes(' ')){
         userName = userName.split(' ')[0];
     }
@@ -20,8 +26,8 @@ export default function Header(){
                 </Link>
                 <Link href={'/'}>Home</Link>
                 <Link href={'/menu'}>Menu</Link>
-                <Link href={'/About'}>About</Link>
-                <Link href={'/Contact'}>Contact</Link>
+                <Link href={'/#about'}>About</Link>
+                <Link href={'/#contact'}>Contact</Link>
             </nav>
             <nav className='flex items-center gap-4 font-semibold text-gray-500'>
                 {status === 'authenticated' && (
@@ -43,9 +49,13 @@ export default function Header(){
                             Register
                         </Link>
                     </>
-                )
-
-                }
+                )}
+                <Link href={'/cart'} className='relative'>
+                    <ShoppingCart/>
+                    <span className='absolute px-1 py-1 text-xs leading-3 text-white rounded-full -right-2 -top-3 bg-primary '>
+                        {cartProducts.length}
+                    </span>
+                </Link>
 
 
             </nav>
