@@ -10,8 +10,14 @@
 
 .hero{
     @apply grid;
-    grid-template-columns: .4fr .6fr;
+    grid-template-columns: .4
+    fr .6fr;
 }
+
+.flying-button-parent button{
+    @apply px-8 py-2 mt-4 text-white rounded-full bg-primary
+}
+
 
 label{
     @apply text-sm leading-tight text-gray-500;
