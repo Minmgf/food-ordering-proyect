@@ -23,12 +23,12 @@ export default function MenuItem(menuItem) {
     async function handleAddToCarButtonClick() {
         const hasOptions = sizes.length > 0 && extraIngredientsPrices.length > 0;
         if(hasOptions && !showPopup){
-            setShowPopup(true);
+            // setShowPopup(true);
             return;
         }
         addToCart(menuItem, selectedSize, selectedExtras);
         await new Promise(resolve => setTimeout(resolve, 1000));
-            setShowPopup(false);
+            // setShowPopup(false);
 
 
         toast.success('Item added to cart', {
@@ -106,12 +106,12 @@ export default function MenuItem(menuItem) {
                                     ))}
                                 </div>
                             )}
-                            <FlyingButton targetTop={'5%'} targetRight={'95%'} src={image}>
+                            {/* <FlyingButton targetTop={'5%'} targetRight={'95%'} src={image}> */}
                                 <div className="sticky bottom-2 "
                                     onClick={handleAddToCarButtonClick}>
                                     Add to cart ${selectedPrice}
                                 </div>
-                            </FlyingButton>
+                            {/* </FlyingButton> */}
                             <button
                                 className="mt-2"
                                 onClick={() => setShowPopup(false)}>

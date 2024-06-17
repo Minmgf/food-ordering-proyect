@@ -6,6 +6,16 @@ export default function AddToCartButton({
         return(
             <div className='flying-button-parent'>
 
+                <button>
+                    <div onClick={onClick}>
+                    Add to cart ${basePrice}
+                    </div>
+                </button>
+
+{/* 
+                Animated 
+
+                
                 <FlyingButton
                 targetTop={'5%'}
                 targetLeft={'90%'}
@@ -13,7 +23,7 @@ export default function AddToCartButton({
                     <div onClick={onClick}>
                     Add to cart ${basePrice}
                     </div>
-                </FlyingButton>
+                </FlyingButton> */}
             </div>
         )
 

@@ -1,9 +1,10 @@
-export default function AddressInputs({addressProps, setAddressProp}){
+export default function AddressInputs({addressProps, setAddressProp, disabled=false}){
     const {phone, streetAddress, zipCode, city, country} = addressProps;
     return(
         <>
             <label htmlFor="phone">Phone number</label>
                 <input
+                    disabled={disabled}
                     type="tel"
                     id="phone"
                     placeholder="Phone number"
@@ -12,6 +13,7 @@ export default function AddressInputs({addressProps, setAddressProp}){
                 />
                 <label htmlFor="address">Street Address</label>
                 <input
+                    disabled={disabled}
                     type="text"
                     id="address"
                     placeholder="Street address"
@@ -22,6 +24,7 @@ export default function AddressInputs({addressProps, setAddressProp}){
                     <div >
                         <label htmlFor="city">City</label>
                         <input
+                            disabled={disabled}
                             type="text"
                             id="city"
                             placeholder="City"
@@ -32,6 +35,7 @@ export default function AddressInputs({addressProps, setAddressProp}){
                     <div>
                         <label htmlFor="zipcode">Zip code</label>
                         <input
+                            disabled={disabled}
                             type="text"
                             id="zipcode"
                             placeholder="Postal Code"
@@ -42,6 +46,7 @@ export default function AddressInputs({addressProps, setAddressProp}){
                 </div>
                 <label htmlFor="country">Country</label>
                 <input
+                    disabled={disabled}
                     type="text"
                     id="country"
                     placeholder="Country"

@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
             <Toaster />
             <Header />
             {children}
-            <footer className='max-w-2xl p-4 mx-auto text-center text-gray-500 border-t'>
+            <footer className='max-w-2xl p-4 mx-auto mt-8 text-center text-gray-500 border-t'>
               &copy; Minmgf
             </footer>
           </AppProvider>
