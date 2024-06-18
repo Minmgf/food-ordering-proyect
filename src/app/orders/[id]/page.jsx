@@ -70,7 +70,7 @@ export default function OrderPage() {
                     </div>
                     <div>
                         <div className="p-4 bg-gray-100 rounded-lg">
-                            <AddressInputs disabled={true} addressProps={...order} />
+                            <AddressInputs disabled={true} addressProps={order} />
                         </div>
                     </div>
                     {/* {JSON.stringify(order)} */}
