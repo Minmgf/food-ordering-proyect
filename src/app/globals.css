@@ -9,9 +9,8 @@
 }
 
 .hero{
-    @apply grid;
-    grid-template-columns: .4
-    fr .6fr;
+    @apply block md:grid;
+    grid-template-columns: .4fr .6fr;
 }
 
 .flying-button-parent button{

@@ -26,9 +26,9 @@ export default function UsersPage() {
     }
 
     return (
-        <section className="max-w-2xl mx-auto mt-8">
+        <section className="max-w-2xl mx-auto mt-8 ">
             <UserTabs isAdmin={true} />
-            <div className="mt-8">
+            <div className="mt-8 ">
                 {users?.length > 0 && users.map(user => (
                     <div
                         key={user._id}
@@ -38,7 +38,7 @@ export default function UsersPage() {
                                 {!!user.name && (<span>{user.name}</span>)}
                                 {!user.name && (<span className="italic">No name</span>)}
                             </div>
-                            <span className="text-gray-500">{user.email}</span>
+                            <span className="text-xs text-gray-500 md:text-sm ">{user.email}</span>
                         </div>
                         <div>
                             <Link className="button" href={'/users/' + user._id}>
