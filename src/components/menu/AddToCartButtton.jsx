@@ -1,4 +1,3 @@
-import FlyingButton from 'react-flying-item'
 export default function AddToCartButton({
     hasSizesOrExtras,onClick, basePrice,image
 }) {
@@ -12,10 +11,10 @@ export default function AddToCartButton({
                     </div>
                 </button>
 
-{/* 
-                Animated 
+{/*
+                Animated
 
-                
+
                 <FlyingButton
                 targetTop={'5%'}
                 targetLeft={'90%'}
