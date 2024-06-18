@@ -3,6 +3,8 @@ import Header from "@/components/layout/Header";
 import { Roboto } from "next/font/google";
 import './globals.css'
 import { Toaster } from "react-hot-toast";
+import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/react"
 
 const roboto = Roboto({ subsets: ["latin"], weight: ["400", "500", "700"] });
 
@@ -26,6 +28,8 @@ export default function RootLayout({ children }) {
           </AppProvider>
         </main>
       </body>
+      <Analytics/>
+      <SpeedInsights/>
     </html>
   );
 }
