@@ -43,7 +43,9 @@ export default function MenuItesmsPage(){
                 <h2 className="mt-8 text-sm text-gray-500">Edit menu items</h2>
                 <div className="grid content-center grid-cols-3 gap-2">
                     {menuItems?.length > 0 && menuItems.map( item => (
-                        <Link href={'/menu-items/edit/'+item._id}
+                        <Link
+                            key={item._id}
+                            href={'/menu-items/edit/'+item._id}
                                 className="flex-col p-4 bg-gray-100 rounded-lg justify-self-center">
                             <div className="relative w-44 h-4w-44">
                                 <Image

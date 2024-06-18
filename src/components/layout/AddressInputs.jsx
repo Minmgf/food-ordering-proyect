@@ -8,7 +8,7 @@ export default function AddressInputs({addressProps, setAddressProp, disabled=fa
                     type="tel"
                     id="phone"
                     placeholder="Phone number"
-                    value={phone}
+                    value={phone || ''}
                     onChange={ev => setAddressProp('phone', ev.target.value)}
                 />
                 <label htmlFor="address">Street Address</label>
@@ -17,7 +17,7 @@ export default function AddressInputs({addressProps, setAddressProp, disabled=fa
                     type="text"
                     id="address"
                     placeholder="Street address"
-                    value={streetAddress}
+                    value={streetAddress || ''}
                     onChange={ev => setAddressProp('streetAddress', ev.target.value)}
                 />
                 <div className="grid grid-cols-2 gap-x-4">
@@ -28,7 +28,7 @@ export default function AddressInputs({addressProps, setAddressProp, disabled=fa
                             type="text"
                             id="city"
                             placeholder="City"
-                            value={city}
+                            value={city || ''}
                             onChange={ev => setAddressProp('city', ev.target.value)}
                         />
                     </div>
@@ -39,7 +39,7 @@ export default function AddressInputs({addressProps, setAddressProp, disabled=fa
                             type="text"
                             id="zipcode"
                             placeholder="Postal Code"
-                            value={zipCode}
+                            value={zipCode || ''}
                             onChange={ev => setAddressProp('zipCode', ev.target.value)}
                         />
                     </div>
@@ -50,7 +50,7 @@ export default function AddressInputs({addressProps, setAddressProp, disabled=fa
                     type="text"
                     id="country"
                     placeholder="Country"
-                    value={country}
+                    value={country || ''}
                     onChange={ev => setAddressProp('country', ev.target.value)}
                 />
         </>

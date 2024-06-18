@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation"
 
 export default function UserTabs({isAdmin}) {
     const path = usePathname();
-    console.log(path)
+    // console.log(path)
     return (
         <div className="flex flex-wrap justify-center gap-2 mb-8 tabs">
         <Link

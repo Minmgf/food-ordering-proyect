@@ -54,7 +54,7 @@ export default function OrderPage() {
                 <div className="grid md:gap-16 md:grid-cols-2">
                     <div>
                         {order.cartProducts.map(product => (
-                            <CartProducts product={product} />
+                            <CartProducts product={product} key={product._id} />
                         ))}
                         <div className="py-2 text-right text-gray-500">
                             Subtotal:

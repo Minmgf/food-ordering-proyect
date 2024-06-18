@@ -19,7 +19,7 @@ export default function MenuPage() {
     return(
         <section className="my-8">
             {categories?.length > 0 && categories.map(c => (
-                <div >
+                <div key={c._id} >
                     <div className="text-center">
                         <SectionHeaders mainHeader={c.name} />
                     </div>

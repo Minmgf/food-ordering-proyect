@@ -23,12 +23,12 @@ export default function MenuItem(menuItem) {
     async function handleAddToCarButtonClick() {
         const hasOptions = sizes.length > 0 && extraIngredientsPrices.length > 0;
         if(hasOptions && !showPopup){
-            // setShowPopup(true);
+            setShowPopup(true);
             return;
         }
         addToCart(menuItem, selectedSize, selectedExtras);
         await new Promise(resolve => setTimeout(resolve, 1000));
-            // setShowPopup(false);
+            setShowPopup(false);
 
 
         toast.success('Item added to cart', {
@@ -81,9 +81,11 @@ export default function MenuItem(menuItem) {
                                 <div className="py-2 rounded-lg">
                                     <h3 className="text-center text-gray-700">Pick your size</h3>
                                     {sizes.map(size => (
-                                        <label className="flex items-center gap-2 p-4 mb-2 border rounded-md">
+                                        <label
+                                            key={size._id}
+                                            className="flex items-center gap-2 p-4 mb-2 border rounded-md">
                                             <input
-                                            onClick={() => setSelectedSize(size)}
+                                            onChange={() => setSelectedSize(size)}
                                             checked={selectedSize?.name === size.name}
                                             type="radio"
                                             name="size"/>
@@ -96,10 +98,12 @@ export default function MenuItem(menuItem) {
                                 <div className="py-2 rounded-lg">
                                     <h3 className="text-center text-gray-700">Any extras?</h3>
                                     {extraIngredientsPrices.map(extraThing => (
-                                        <label className="flex items-center gap-2 p-4 mb-2 border rounded-md">
+                                        <label
+                                            key={extraThing._id}
+                                            className="flex items-center gap-2 p-4 mb-2 border rounded-md">
                                             <input
                                             type="checkbox"
-                                            onClick={ev => handleExtraThingClick(ev, extraThing)}
+                                            onChange={ev => handleExtraThingClick(ev, extraThing)}
                                             name={extraThing.name}/>
                                             Extra {extraThing.name} +${ extraThing.price}
                                         </label>
@@ -107,13 +111,13 @@ export default function MenuItem(menuItem) {
                                 </div>
                             )}
                             {/* <FlyingButton targetTop={'5%'} targetRight={'95%'} src={image}> */}
-                                <div className="sticky bottom-2 "
+                                <button className="sticky bg-orange-600 bottom-2 "
                                     onClick={handleAddToCarButtonClick}>
                                     Add to cart ${selectedPrice}
-                                </div>
+                                </button>
                             {/* </FlyingButton> */}
                             <button
-                                className="mt-2"
+                                className="mt-2 "
                                 onClick={() => setShowPopup(false)}>
                                     Cancel
                             </button>

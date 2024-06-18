@@ -33,7 +33,9 @@ export default function OrdersPage() {
                     <div className="">Loading Orders...</div>
                 )}
                 {orders?.length > 0 && orders.map(order => (
-                    <div className="flex flex-col items-center gap-6 p-4 mb-2 bg-gray-100 rounded-lg sm:flex-row ">
+                    <div
+                        key={order._id}
+                        className="flex flex-col items-center gap-6 p-4 mb-2 bg-gray-100 rounded-lg sm:flex-row ">
                         <div className="flex items-center gap-6 grow">
 
                             <div >

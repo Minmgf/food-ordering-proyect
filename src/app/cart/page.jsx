@@ -92,7 +92,7 @@ export default function CartPage() {
             <div className="text-center">
                 <SectionHeaders mainHeader="Cart" />
             </div>
-            <div className="grid grid-cols-2 gap-8 mt-8 ">
+            <div className="gap-8 mt-8 md:grid md:grid-cols-2 ">
                 <div>
                     {cartProducts?.length === 0 && (
                         <div className="">
@@ -101,6 +101,7 @@ export default function CartPage() {
                     )}
                     {cartProducts?.length > 0 && cartProducts.map(( product , index ) => (
                         <CartProducts
+                            key={index}
                             product={product}
                             onRemove={removeCartProduct}
                             index={index}

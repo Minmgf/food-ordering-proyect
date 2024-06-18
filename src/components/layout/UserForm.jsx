@@ -5,7 +5,7 @@ import toast from "react-hot-toast";
 import AddressInputs from "./AddressInputs";
 
 export default function UserForm({ user, onSave }) {
-    console.log(user);
+    // console.log(user);
     const [userName, setUserName] = useState(user?.name || '');
     const [image, setImage] = useState(user?.image || '');
     const [phone, setPhone] = useState(user?.phone || '');
@@ -73,7 +73,7 @@ export default function UserForm({ user, onSave }) {
                         <input
                             type="checkbox" className="" id="adminCB" value={'1'}
                             checked={admin}
-                            onClick={ev => setAdmin(ev.target.checked)}
+                            onChange={ev => setAdmin(ev.target.checked)}
                             />
 
                         <span>Admin</span>
